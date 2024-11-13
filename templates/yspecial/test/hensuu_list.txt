@@ -1,0 +1,20 @@
+
+	★・・・取得できている
+
+	・{$preview}        ⇒ URLにpreview=onが付いてきたらプレビューフラグが立つ
+	・{$charset}        ⇒ metaの文字コード（EUC-JP/UTF-8）
+	★{$event}          ⇒ 特集フォルダ名
+	・{$special_title}  ⇒ 特集名
+	・{$meta_keywords}    ⇒ meta:Keywords
+	・{$meta_description} ⇒ meta:Description
+	・{$sns_description}  ⇒ sns:Description
+	・{$special_period}   ⇒ 掲載期間
+	
+	＜index＞
+	・rec_double（その他の年運おすすめメニュー）用メニュー情報リスト
+	  ⇒ {$year_group_list}とか。必要なもの：contents_title,menu_id,menu_url,menu_title,price_normal,price_premium
+	
+	＜結果＞
+	・{$uri_path}  ⇒ imgなどのパス。/zap/event/shimohank_2018 が入りたい。
+	
+

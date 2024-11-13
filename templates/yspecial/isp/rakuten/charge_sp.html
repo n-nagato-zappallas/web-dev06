@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="EUC-JP">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta name="copyright" content="Copyright(C)cocoloni,Inc All Rights Reserverd." />
+    <meta name="Content-Language" content="ja">
+    <meta name="Cache-Control" content="no-cache">
+    <meta name="Pragma" content="no-cache">
+    <meta name="robots" content="noindex">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <title>{$contents_title} - LOVE FORTUNE　コンテンツ購入決済確認</title>
+    <script type="text/javascript" src="./isp/rakuten/source/js/jquery.js"></script>
+    <script type="text/javascript" src="./isp/rakuten/source/js/script.js"></script>
+    <script type="text/javascript" src="./isp/rakuten/source/js/charge.js"></script>
+    <link rel="stylesheet" type="text/css" href="./isp/rakuten/source/css/charge_sp.css">
+  </head>
+<body onUnload="flgReset( )">
+  <script type="text/javascript" src="./isp/rakuten/source/js/analyzer1.js"></script>
+  <div id="base">
+    <!--- contents --->
+    <article>
+      <header>
+        <h1>コンテンツ購入決済確認</h1>
+      </header>
+      <section>
+        <h2 id="contents_banner"><a href="https://lovefortune.zappallas.com/rakuten/event/{$event}/index.html"><!-- img src="/rakuten/common/image/banner/{$contents_name}.gif" alt="{$contents_title}" title="{$contents_title}"></a></h2-->
+        <table id="charge_tbl">
+          <tr>
+            <th>商品名：</th>
+            <td>{$title}</td>
+          </tr>
+          <tr>
+            <th>価格：</th>
+            <td>{$charge}円（税込）</td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <p>購入内容を確認してください。<br>内容に間違いはありませんか？<br>間違いがなければ、下の「お支払い」ボタンを押してください。</p>
+            </td>
+          </tr>
+        </table>
+        <form name="frmMain" action="{$charge_cgi}" method="{$cgi_method}" accept-charset="UTF-8" onSubmit="return false">
+          <input type="hidden" name="checkout" value="{$checkout}">
+          <input type="hidden" name="sig" value="{$sig}">
+          <div id="frm_btn">
+            <input type="image" src="//checkout.rakuten.co.jp/p/common/img/btn_check_00.gif?c1169f657112833d78371e8c495e59d1" onclick="checksubmit( );" alt="楽天会員IDでお支払い">
+          </div>
+        </form>
+          
+          <div style="width:100%; margin:0 auto 10px;">
+          【ご購入いただいた占い結果閲覧について】<br>
+・占い結果は、ご購入日を含め、7日間閲覧が可能です。延長はできかねます。各種お問い合わせの対応可能期間も同様、ご購入日を含む7日間となります。占い結果はお早めにご覧くださいませ。<br>
+・「楽天ID」にてログイン後、「楽天ペイ　利用履歴」、もしくは注文受付メールの「ダウンロードURL」から再閲覧が可能です。また、占い結果をデータとして保存しておくことはできませんので、保存をご希望の場合は別途プリントアウト等されることをお勧めいたします。<br>
+          【特定商取引法に基づく表記 】<br>
+・商品の性質上、ご入金後のキャンセル・返品・返金は致しかねます。あらかじめご了承ください。<br>
+・<a href="/rakuten/common/notice.html" onclick="targetPage(this); return false;" target="_196_isp">支払時期及び方法、配送方法、返品特約はこちら</a>
+          </div>
+        <!---/ --->
+        <footer>
+          <p><a href="https://lovefortune.zappallas.com/rakuten/event/{$event}/index.html">コンテンツTOPへ戻る</a></p>
+          <small id="zap_copy">&copy;cocoloni,Inc</small>
+        </footer>
+      </section>
+    </article>
+    <!---/contents --->
+  </div>
+</body>
+</html>
